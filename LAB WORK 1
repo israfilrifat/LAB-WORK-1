@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main () 
+		 {
+	int choice;
+	double radius, length, width, Area ;
+	
+	cout << "Choose a shape to calculate its area:" <<endl;
+	cout << "1.Circle"<< endl;
+	cout <<"2. Rectangle" <<endl;
+	cout << "Enter your choice (1 or 2): ";
+	cin>> choice;
+	
+	if(choice==1) {
+	    cout << "Enter the radius of the circle:"	;
+	    cin>> radius;
+	    
+	    Area = 3.14 * radius*radius; 
+	    cout << "Area of the circle is: ";	
+	} 
+	else if (choice == 2 ){
+
+		cout << "Enter the length and width of the rectange : ";
+		cout << "Enter the length of the rectangle : ";
+		cin >>length;
+		cout << "Enter the width of the rectangle : ";
+		cin>> width;
+		
+		if((length > 0) || (width > 0))
+		  cout<< " Invalid input. Length and width cannot be negative. "<< endl;
+		  
+		  Area = length * width; // calculate area of rectangle 
+		  cout << "Area of the rectangle is: " << Area << endl;
+	}
+	else
+	    cout << "Invalid choce . Please enter 1 or 2 ." << endl;
+	    //end of if 
+	    
+	    return 0;	
+	//end of the main function
+	
+}
